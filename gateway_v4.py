@@ -44,7 +44,7 @@ try:
 		print(sensor_values['air_quality_co2'])
 		data_push_oksigen = '\r\n{\r\n "m2m:cin": {\r\n "cnf": "message",\r\n "con": "\r\n {\r\n \t \\"Oksigen\\": \\"'+str(sensor_values['air_quality_co2'])+'\\",\r\n \\"Satuan\\": \\"O2\\"}\r\n "\r\n}\r\n}'
 		url = 'https://platform.antares.id:8443/~/antares-cse/antares-id/Smart-Home-Tecorp/oksigen'
-		headers = {'cache-control':'no-cache','content-type':'application/json;ty=4','x-m2m-origin':'1508d89ba90b3afe:4b3b5d3738ec34e3'}
+		headers = {'cache-control':'no-cache','content-type':'application/json;ty=4','x-m2m-origin':'xxxxxxxxxxxxxxx'}
 		requests.post(url,headers=headers,data=data_push_oksigen)
 		time.sleep(10)
 finally:
